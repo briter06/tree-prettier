@@ -4,7 +4,7 @@ Pretty print any tree-like structure. Only provide the functions to retrieve the
 
 ## Usage
 
-```typscript
+```typescript
 import { prettierTree } from 'tree-prettier'
 
 export type CustomNode = {
