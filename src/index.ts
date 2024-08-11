@@ -6,14 +6,14 @@ const characters = {
 
 export const prettierTree = <T>(
   node: T,
-  getValue: (node: T) => Object,
+  getValue: (node: T) => string,
   getChildren: (node: T) => T[],
   config?: {
     lengthOfEdge?: number;
   }
 ) => {
   const lengthOfEdge = config?.lengthOfEdge ?? 4;
-  let txt = getValue(node).toString();
+  let txt = getValue(node);
   const children = getChildren(node);
   for (let i = 0; i < children.length; i++) {
     const innerNode = prettierTree(children[i], getValue, getChildren, config).split(
